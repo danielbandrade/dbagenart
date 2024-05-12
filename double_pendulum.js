@@ -15,13 +15,13 @@ let a1_a = 0;
 let a2_a = 0;
 let px2 = -1;
 let py2 = -1;
-let g = 0.05;
+let g = 1;
 let pg
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	pg = createGraphics(windowWidth, windowHeight);
-	pg.translate(width / 2 , 200)
+	pg.translate(width / 2 , windowHeight/2);
 	
 	//fill(255)
 	//stroke(255)
@@ -29,7 +29,7 @@ function setup() {
 }
 
 function draw() {
-	background(0);
+	background('#b20a2c');
 	image(pg, 0, 0, width, height)
 	translate(width / 2, 200);
 
@@ -63,7 +63,7 @@ function draw() {
 	a1 += a1_v
 	a2 += a2_v
 	
-	pg.stroke(color(0, 100, 255, 220))
+	pg.stroke(color('#fffbd5'))
 	pg.strokeWeight(4)
 	if (frameCount > 1) {
 		pg.line(px2, py2, x2, y2)
