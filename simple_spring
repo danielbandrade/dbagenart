@@ -1,0 +1,32 @@
+let y_pos = 250;
+let y_init = 500;
+let k = 0.001;
+let size = 100;
+let velocity = 0;
+
+
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+	
+	
+}
+
+function draw() {
+	background('#800000');
+	noStroke();
+	//stroke('#982B1C');
+	//strokeWeight(4);
+	fill('#F2E8C6');
+	
+	circle(windowWidth/2,y_pos,size);
+	
+	let x = (y_pos-y_init)
+	let force = - k * x ;
+	velocity += force ;
+	y_pos += velocity;
+	velocity *= 0.999;
+	
+	
+
+}
